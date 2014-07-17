@@ -237,7 +237,7 @@ namespace wx
             comm.ExecuteNonQuery();
             conn.Close();
             GridView3.EditIndex = -1;
-            bind_zlzk(); 
+          //  bind_zlzk(); 
         }
 
 
