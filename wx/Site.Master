@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="wx.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title>报价审批系统</title>
+    <link rel="icon" type="image/ico" href="Images/ico.png" />
+    <link rel="stylesheet" type="text/css" href="Style.css" />
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" language="javascript">
+            $(function () {
+                $("#Tab li").each(function (index) {
+                    $(this).mouseover(function () {
+                        $("li.tabIn").removeClass("tabIn");
+                        $(this).addClass("tabIn");
+                        $("#tabContent div.tabCont").removeClass("tabCont");
+                        $("#tabContent div").eq(index).addClass("tabCont");
+                    })
+                })
+            })
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="Logo">
+    <a href="http://192.168.0.6/" id="logoLink"></a>
+    </div>
+    
+    <div id="Nav">
+    <ul>
+        <li><a href="http://www.kocel.com/">首页</a></li>
+        <li><a href="#">外协工作计划</a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+    </ul>
+    </div>
+    <div id="Banner1">
+        <h1>欢迎您使用外协工作汇报系统！</h1>
+    </div>
+    <div id="Content">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    <div class="clear"></div>
+    <div id="Footer">
+        <p>版权归生产本部所有</p>
+        <p>使用中有任何问题，请联系生产本部程昌忠，kp.ccz@kocel.com</p>
+    </div>
+    </form>
+</body>
+</html>
